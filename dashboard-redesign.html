@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FullSession Dashboard Redesign</title>
+    <link rel="stylesheet" href="./phosphor/duotone.css" />
+    <link rel="stylesheet" href="./dashboard-redesign.css" />
+  </head>
+  <body>
+    <main class="app-frame">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">fi</span>
+          <div>
+            <strong>fullsession.io</strong>
+            <small>Experience analytics</small>
+          </div>
+        </div>
+
+        <label class="search">
+          <i class="ph-duotone ph-magnifying-glass"></i>
+          <input value="Search anything" aria-label="Search anything" readonly />
+        </label>
+
+        <nav class="nav-group" aria-label="Primary navigation">
+          <small>Main</small>
+          <a class="is-active" href="#"><i class="ph-duotone ph-house"></i><span>Home</span></a>
+          <a href="#"><i class="ph-duotone ph-play-circle"></i><span>User Sessions</span></a>
+          <a href="#"><i class="ph-duotone ph-chat-circle-text"></i><span>Feedback</span></a>
+          <a href="#"><i class="ph-duotone ph-funnel"></i><span>Funnels</span></a>
+          <a href="#"><i class="ph-duotone ph-chart-line-up"></i><span>Conversion Analysis</span></a>
+          <a href="#"><i class="ph-duotone ph-fire"></i><span>Heatmaps</span></a>
+          <a href="#"><i class="ph-duotone ph-sparkle"></i><span>Lift AI</span><em>Beta</em></a>
+          <a href="#"><i class="ph-duotone ph-squares-four"></i><span>Dashboards</span><em class="new">New</em></a>
+        </nav>
+
+        <div class="segments">
+          <small>Recent Segments</small>
+          <button class="segment-chip active" type="button"><i class="ph-duotone ph-users-three"></i>Everyone</button>
+          <button class="segment-chip" type="button"><i class="ph-duotone ph-user-focus"></i>one session test</button>
+          <button class="segment-chip" type="button"><i class="ph-duotone ph-test-tube"></i>muttest</button>
+          <button class="segment-chip" type="button"><i class="ph-duotone ph-bookmark-simple"></i>h_17_2</button>
+          <button class="more-link" type="button">More ...</button>
+        </div>
+
+        <div class="profile">
+          <span>PU</span>
+          <div>
+            <strong>p. jain</strong>
+            <small>Configure</small>
+          </div>
+          <i class="ph-duotone ph-caret-up-down"></i>
+        </div>
+      </aside>
+
+      <section class="workspace">
+        <header class="dashboard-header">
+          <div class="header-main">
+            <div>
+              <div class="crumb">
+                <i class="ph-duotone ph-chart-line-up"></i>
+                <span>Dashboards / <strong>Product Management</strong></span>
+              </div>
+              <p>Page performance, form friction, browser compatibility, and feedback insights.</p>
+            </div>
+            <div class="top-actions">
+              <button class="icon-only" type="button" aria-label="Refresh"><i class="ph-duotone ph-arrow-clockwise"></i></button>
+              <button class="primary" type="button"><i class="ph-duotone ph-plus"></i>Add charts</button>
+            </div>
+          </div>
+          <div class="filterbar">
+            <button class="segment" type="button"><i class="ph-duotone ph-users-three"></i>Segment: Everyone<i class="ph-duotone ph-caret-down"></i></button>
+            <div class="filters">
+              <button type="button"><i class="ph-duotone ph-sliders-horizontal"></i>Update segment</button>
+              <button type="button">All countries<i class="ph-duotone ph-caret-down"></i></button>
+              <button type="button">All browsers<i class="ph-duotone ph-caret-down"></i></button>
+              <button type="button">All devices<i class="ph-duotone ph-caret-down"></i></button>
+              <button type="button"><i class="ph-duotone ph-calendar-blank"></i>Last 30 days</button>
+            </div>
+          </div>
+        </header>
+
+        <section class="ai-callout">
+          <div class="callout-icon"><i class="ph-duotone ph-sparkle"></i></div>
+          <div>
+            <strong>Lift AI found 1 opportunity worth investigating</strong>
+            <span>Biggest: Fix Uncaught Exception on Blog Page. Resolve the uncaught exception error on /blog/ux-audit caused by TypeError: null is not an object.</span>
+          </div>
+          <button type="button">Show recommendations</button>
+        </section>
+
+        <section class="summary-grid">
+          <article class="metric-card metric-sessions">
+            <div class="metric-icon"><i class="ph-duotone ph-monitor-play"></i></div>
+            <small>Total Sessions</small>
+            <div class="metric-row"><strong>4,041</strong><em class="neutral">Last 30 days</em></div>
+          </article>
+          <article class="metric-card metric-rage">
+            <div class="metric-icon"><i class="ph-duotone ph-cursor-click"></i></div>
+            <small>Rage Click Count</small>
+            <div class="metric-row"><strong>114</strong><em class="positive">+63.7% increased</em></div>
+          </article>
+          <article class="metric-card metric-dead">
+            <div class="metric-icon"><i class="ph-duotone ph-hand-tap"></i></div>
+            <small>Dead Click Count</small>
+            <div class="metric-row"><strong>385</strong><em class="positive">+24.7% increased</em></div>
+          </article>
+          <article class="metric-card metric-errors">
+            <div class="metric-icon"><i class="ph-duotone ph-warning-octagon"></i></div>
+            <small>Error Sessions</small>
+            <div class="metric-row"><strong>287</strong><em class="negative">-10.3% reduced</em></div>
+          </article>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="card sessions-card span-8">
+            <div class="card-head session-card-head">
+              <div>
+                <h2><i class="ph-duotone ph-play-circle"></i>Sessions to review</h2>
+                <span>Worth watching</span>
+              </div>
+              <a class="card-action" href="#">Open user sessions<i class="ph-duotone ph-arrow-right"></i></a>
+            </div>
+            <div class="review-table">
+              <div class="review-row review-header"><span></span><span>Score</span><span>Signals</span><span>Session</span><span>Events</span><span>Date</span></div>
+              <div class="review-row"><button><i class="ph-duotone ph-play"></i></button><strong>44</strong><span><em>Rage x4</em><em>Dead x52</em></span><b>5e4z4agz5fw<small>Since Jun 8 / India / Linux</small></b><span>9</span><span>Jun 8, 2026</span></div>
+              <div class="review-row"><button><i class="ph-duotone ph-play"></i></button><strong>40</strong><span><em>Dead x10</em><em>Thrash x21</em></span><b>5p14u5drwd<small>Since May 28 / India / Windows</small></b><span>72</span><span>Jun 16, 2026</span></div>
+              <div class="review-row"><button><i class="ph-duotone ph-play"></i></button><strong>35</strong><span><em>Dead x43</em><em>Thrash x2</em></span><b>6geczpa3vw<small>Since Jun 8 / India / Windows</small></b><span>3</span><span>Jun 8, 2026</span></div>
+              <div class="review-row"><button><i class="ph-duotone ph-play"></i></button><strong>34</strong><span><em>Dead x4</em><em>Thrash x19</em></span><b>5p14u5drwd<small>Since May 28 / India / Windows</small></b><span>61</span><span>Jun 18, 2026</span></div>
+            </div>
+          </article>
+
+          <article class="card opportunity-card span-4">
+            <div class="card-head">
+              <div>
+                <h2><i class="ph-duotone ph-target"></i>Opportunity focus</h2>
+                <span>Current segment</span>
+              </div>
+            </div>
+            <div class="focus-score">
+              <span class="visual-icon focus-icon"><i class="ph-duotone ph-fire"></i></span>
+              <div>
+                <strong>2.8%</strong>
+                <span>friction rate</span>
+              </div>
+            </div>
+            <div class="focus-list">
+              <div><i class="ph-duotone ph-warning-circle"></i><span>Errors</span><strong>365</strong></div>
+              <div><i class="ph-duotone ph-cursor-click"></i><span>Rage clicks</span><strong>114</strong></div>
+              <div><i class="ph-duotone ph-hand-tap"></i><span>Dead clicks</span><strong>385</strong></div>
+            </div>
+          </article>
+
+          <article class="card chart-card span-8">
+            <div class="card-head">
+              <div>
+                <h2><i class="ph-duotone ph-chart-line"></i>Avg. Pages per Session Over Time</h2>
+                <span>All sessions</span>
+              </div>
+              <div class="chart-tabs">
+                <button class="active" type="button">Sessions</button>
+                <button type="button">Friction</button>
+                <button type="button">Errors</button>
+                <button type="button">Feedback</button>
+              </div>
+            </div>
+            <div class="line-chart">
+              <svg viewBox="0 0 760 260" role="img" aria-label="Average pages per session trend">
+                <defs>
+                  <linearGradient id="mainChartFill" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#79b9e8" stop-opacity="0.48" />
+                    <stop offset="100%" stop-color="#79b9e8" stop-opacity="0.04" />
+                  </linearGradient>
+                </defs>
+                <g class="chart-grid">
+                  <line x1="42" x2="730" y1="45" y2="45" />
+                  <line x1="42" x2="730" y1="94" y2="94" />
+                  <line x1="42" x2="730" y1="143" y2="143" />
+                  <line x1="42" x2="730" y1="192" y2="192" />
+                </g>
+                <g class="chart-y">
+                  <text x="8" y="48">6000</text>
+                  <text x="8" y="97">4500</text>
+                  <text x="8" y="146">3000</text>
+                  <text x="8" y="195">1500</text>
+                  <text x="22" y="235">0</text>
+                </g>
+                <path class="chart-area" d="M42 170 C70 128 95 122 120 104 C145 78 170 60 196 42 C220 76 238 58 260 70 C286 50 310 86 334 78 C358 100 380 98 404 124 C430 150 454 118 478 132 C506 150 532 166 560 154 C590 146 616 160 644 178 C672 188 704 172 730 184 L730 220 L42 220 Z" />
+                <path class="chart-line" d="M42 170 C70 128 95 122 120 104 C145 78 170 60 196 42 C220 76 238 58 260 70 C286 50 310 86 334 78 C358 100 380 98 404 124 C430 150 454 118 478 132 C506 150 532 166 560 154 C590 146 616 160 644 178 C672 188 704 172 730 184" />
+                <rect class="chart-selection" x="406" y="45" width="84" height="176" />
+                <circle class="chart-point" cx="454" cy="118" r="5" />
+                <g class="chart-tooltip">
+                  <rect x="470" y="102" width="142" height="44" rx="4" />
+                  <text x="484" y="120">Product Management</text>
+                  <text x="484" y="137">Total Sessions: 4.04K</text>
+                </g>
+              </svg>
+              <div class="axis-labels">
+                <span>Jun 4</span><span>Jun 10</span><span>Jun 16</span><span>Jun 22</span><span>Jul 2</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card form-card span-4">
+            <div class="card-head">
+              <h2><i class="ph-duotone ph-list-checks"></i>Form Abandonment by Page</h2>
+            </div>
+            <div class="abandonment-card">
+              <span class="visual-icon form-icon"><i class="ph-duotone ph-browser"></i></span>
+              <div>
+                <span>/book-a-demo</span>
+                <strong>5 abandoned forms</strong>
+              </div>
+            </div>
+            <div class="mini-progress"><span style="--w:68%"></span></div>
+            <small class="helper">Highest abandonment page in the selected segment.</small>
+            <div class="form-insights">
+              <div><i class="ph-duotone ph-files"></i><span>Page views</span><strong>164</strong></div>
+              <div><i class="ph-duotone ph-monitor-play"></i><span>Reviewable sessions</span><strong>5</strong></div>
+              <div><i class="ph-duotone ph-calendar-blank"></i><span>Window</span><strong>30 days</strong></div>
+            </div>
+          </article>
+
+          <article class="card errors-card span-4">
+            <div class="card-head">
+              <h2><i class="ph-duotone ph-bug"></i>Top errors by sessions affected</h2>
+              <a href="#">All errors</a>
+            </div>
+            <div class="error-list compact-errors">
+              <div class="error-item">
+                <span><strong>Cannot read properties of null</strong><small>/pricing</small></span>
+                <em>36</em>
+              </div>
+              <div class="error-item">
+                <span><strong>Cannot read properties of null</strong><small>/blog/close-ended-question-examples</small></span>
+                <em>26</em>
+              </div>
+              <div class="error-item">
+                <span><strong>Cannot read properties of null</strong><small>/blog/close-ended-question-examples</small></span>
+                <em>22</em>
+              </div>
+              <div class="error-item">
+                <span><strong>Null is not an object</strong><small>/book-a-demo</small></span>
+                <em>7</em>
+              </div>
+            </div>
+            <a class="card-cta" href="#"><i class="ph-duotone ph-monitor-play"></i>View affected sessions</a>
+          </article>
+
+          <article class="card feedback-card span-4">
+            <div class="card-head">
+              <h2><i class="ph-duotone ph-chat-circle-dots"></i>Recent Feedback</h2>
+              <a href="#">All feedback</a>
+            </div>
+            <div class="feedback-status">
+              <span class="visual-icon feedback-icon"><i class="ph-duotone ph-chat-teardrop-text"></i></span>
+              <strong>0 new responses</strong>
+              <span>Feedback is quiet for this period. Keep the widget active on high-friction pages.</span>
+            </div>
+            <div class="feedback-sources">
+              <span><i class="ph-duotone ph-check-circle"></i>Widget active</span>
+              <span><i class="ph-duotone ph-link"></i>Linked to sessions</span>
+            </div>
+          </article>
+
+          <article class="card span-4">
+            <div class="card-head">
+              <h2><i class="ph-duotone ph-timer"></i>Slowest Pages</h2>
+            </div>
+            <div class="simple-table slow-pages">
+              <div class="table-row table-header"><span>Page</span><span>Load Time</span></div>
+              <div class="table-row"><span>/blog/how-to-read-a-heatmap/</span><b>17.4s</b></div>
+              <div class="table-row"><span>/blog/website-issues</span><b>16.8s</b></div>
+              <div class="table-row"><span>/blog/fullsession-vs-hotjar-heatmaps</span><b>11.3s</b></div>
+              <div class="table-row"><span>/blog/ecommerce-cro-audit</span><b>9.54s</b></div>
+              <div class="table-row"><span>/page/25</span><b>9.47s</b></div>
+            </div>
+          </article>
+
+          <article class="card trend-card span-8">
+            <div class="card-head">
+              <h2><i class="ph-duotone ph-activity"></i>Trends</h2>
+            </div>
+            <div class="trend-grid">
+              <div>
+                <span>Sessions</span>
+                <strong>4,041</strong>
+                <svg class="mini-area-chart" viewBox="0 0 240 72" aria-hidden="true">
+                  <path class="mini-fill blue" d="M4 52 C38 34 62 42 88 26 C116 12 138 30 164 24 C192 18 214 38 236 26 L236 70 L4 70 Z" />
+                  <path class="mini-line blue" d="M4 52 C38 34 62 42 88 26 C116 12 138 30 164 24 C192 18 214 38 236 26" />
+                </svg>
+              </div>
+              <div>
+                <span>Friction rate</span>
+                <strong>2.8%</strong>
+                <svg class="mini-area-chart" viewBox="0 0 240 72" aria-hidden="true">
+                  <path class="mini-fill orange" d="M4 24 C34 42 58 30 82 48 C112 62 136 38 164 46 C190 54 214 36 236 44 L236 70 L4 70 Z" />
+                  <path class="mini-line orange" d="M4 24 C34 42 58 30 82 48 C112 62 136 38 164 46 C190 54 214 36 236 44" />
+                </svg>
+              </div>
+              <div>
+                <span>Feedback</span>
+                <strong>0</strong>
+                <svg class="mini-area-chart" viewBox="0 0 240 72" aria-hidden="true">
+                  <path class="mini-fill green" d="M4 54 C42 58 76 56 112 58 C148 60 184 56 236 58 L236 70 L4 70 Z" />
+                  <path class="mini-line green" d="M4 54 C42 58 76 56 112 58 C148 60 184 56 236 58" />
+                </svg>
+              </div>
+              <div>
+                <span>Errors</span>
+                <strong>365</strong>
+                <svg class="mini-area-chart" viewBox="0 0 240 72" aria-hidden="true">
+                  <path class="mini-fill red" d="M4 56 C32 44 54 50 76 34 C102 14 126 30 152 22 C180 16 204 44 236 36 L236 70 L4 70 Z" />
+                  <path class="mini-line red" d="M4 56 C32 44 54 50 76 34 C102 14 126 30 152 22 C180 16 204 44 236 36" />
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <article class="card span-4">
+            <div class="card-head">
+              <h2><i class="ph-duotone ph-files"></i>Top Pages by Visits</h2>
+            </div>
+            <div class="simple-table pages-table">
+              <div class="table-row table-header"><span>Page</span><span>Views</span><span>%</span></div>
+              <div class="table-row"><span>/</span><b>987</b><em>43.1%</em></div>
+              <div class="table-row"><span>/blog</span><b>301</b><em>13.1%</em></div>
+              <div class="table-row"><span>/pricing</span><b>222</b><em>9.7%</em></div>
+              <div class="table-row"><span>/blog/close-ended-question-examples</span><b>197</b><em>8.6%</em></div>
+              <div class="table-row"><span>/book-a-demo</span><b>164</b><em>7.1%</em></div>
+              <div class="table-row"><span>/product/session-replay</span><b>114</b><em>5.0%</em></div>
+            </div>
+          </article>
+
+          <article class="card span-6">
+            <div class="card-head">
+              <h2><i class="ph-duotone ph-code"></i>Sessions with JS Exceptions</h2>
+            </div>
+            <div class="session-mini-list">
+              <div><strong>ta39vg6hv6w</strong><span>India / desktop - Windows</span><em>Jul 3 / 8 events</em></div>
+              <div><strong>ms9484lpej9</strong><span>India / desktop - Mac</span><em>Jul 3 / 1 event</em></div>
+              <div><strong>kbrykdvzvhot</strong><span>The Netherlands / desktop - Windows</span><em>Jul 3 / 2 events</em></div>
+              <div><strong>jyf69ds2di</strong><span>India / desktop - Windows</span><em>Jul 3 / 3 events</em></div>
+            </div>
+          </article>
+
+          <article class="card browser-card span-6">
+            <div class="card-head">
+              <h2><i class="ph-duotone ph-globe"></i>Sessions by Browser &amp; OS</h2>
+            </div>
+            <div class="bar-list">
+              <div><span>Chrome - Windows</span><i style="--w:100%"></i><b>2.0k</b></div>
+              <div><span>Chrome - Mac</span><i style="--w:66%"></i><b>1.2k</b></div>
+              <div><span>Safari - iOS</span><i style="--w:18%"></i><b>228</b></div>
+              <div><span>Chrome - Linux</span><i style="--w:15%"></i><b>220</b></div>
+              <div><span>Chrome - Android</span><i style="--w:9%"></i><b>97</b></div>
+              <div><span>Microsoft Edge</span><i style="--w:7%"></i><b>59</b></div>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

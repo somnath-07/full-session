@@ -108,6 +108,13 @@ a {
   border: 1px solid #dbdcda;
   border-radius: var(--radius);
   box-shadow: 0 34px 90px rgba(24, 27, 31, 0.14);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.app-frame::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .sidebar {
@@ -441,9 +448,15 @@ a {
   min-width: 206px;
   justify-content: flex-start;
   padding: 0 12px;
+  overflow: hidden;
   color: #226db1;
   border-color: #b9d8f3;
   background: #edf6fd;
+}
+
+.filterbar > .segment > i:first-child {
+  margin-top: -1px;
+  color: #226db1;
 }
 
 .filterbar > .segment span {
@@ -454,15 +467,17 @@ a {
 
 .filterbar > .segment i:last-child {
   margin-left: auto;
+  color: #226db1;
 }
 
 .filterbar > .segment i {
-  display: inline-grid;
-  place-items: center;
-  width: 17px;
-  height: 17px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
   font-size: 17px;
-  line-height: 1;
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .hero {
@@ -1058,6 +1073,8 @@ a {
 }
 
 .abandonment-card .visual-icon {
+  display: grid;
+  place-items: center;
   width: 46px;
   height: 46px;
   color: var(--red);
@@ -1065,7 +1082,12 @@ a {
 }
 
 .abandonment-card .visual-icon i {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
   font-size: 26px;
+  line-height: 1;
+  text-align: center;
 }
 
 .abandonment-card span,
@@ -1284,6 +1306,7 @@ a {
   display: flex;
   align-items: center;
   gap: 7px;
+  white-space: nowrap;
   min-height: 34px;
   padding: 0 10px;
   color: #57606b;
@@ -1303,6 +1326,8 @@ a {
 }
 
 .trend-grid div {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
   min-height: 122px;
   padding: 12px;
   border: 1px solid var(--soft);
@@ -1319,9 +1344,10 @@ a {
 
 .mini-area-chart {
   display: block;
+  align-self: end;
   width: 100%;
   height: 58px;
-  margin-top: 11px;
+  margin: 11px 0 0;
 }
 
 .mini-fill {

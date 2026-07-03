@@ -25,13 +25,13 @@
 
         <nav class="nav-group" aria-label="Primary navigation">
           <small>Main</small>
-          <a class="is-active" href="#"><i class="ph-duotone ph-house"></i><span>Home</span></a>
+          <a class="is-active" href="#home" data-page="home"><i class="ph-duotone ph-house"></i><span>Home</span></a>
           <a href="#"><i class="ph-duotone ph-play-circle"></i><span>User Sessions</span></a>
           <a href="#"><i class="ph-duotone ph-chat-circle-text"></i><span>Feedback</span></a>
           <a href="#"><i class="ph-duotone ph-funnel"></i><span>Funnels</span></a>
           <a href="#"><i class="ph-duotone ph-chart-line-up"></i><span>Conversion Analysis</span></a>
           <a href="#"><i class="ph-duotone ph-fire"></i><span>Heatmaps</span></a>
-          <a href="#"><i class="ph-duotone ph-sparkle"></i><span>Lift AI</span><em>Beta</em></a>
+          <a href="#lift-ai" data-page="lift-ai"><i class="ph-duotone ph-sparkle"></i><span>Lift AI</span><em>Beta</em></a>
           <a href="#"><i class="ph-duotone ph-squares-four"></i><span>Dashboards</span><em class="new">New</em></a>
         </nav>
 
@@ -55,6 +55,7 @@
       </aside>
 
       <section class="workspace">
+        <div class="page-view is-active" data-page="home">
         <header class="dashboard-header">
           <div class="header-main">
             <div>
@@ -85,7 +86,7 @@
             <strong>Lift AI found 1 opportunity worth investigating</strong>
             <span>Biggest: Fix Uncaught Exception on Blog Page. Resolve the uncaught exception error on /blog/ux-audit caused by TypeError: null is not an object.</span>
           </div>
-          <button type="button">Show recommendations</button>
+          <button class="js-open-lift" type="button">Show recommendations</button>
         </section>
 
         <section class="summary-grid">
@@ -357,7 +358,149 @@
             </div>
           </article>
         </section>
+        </div>
+
+        <div class="page-view" data-page="lift-ai">
+          <header class="dashboard-header">
+            <div class="header-main">
+              <div>
+                <div class="crumb">
+                  <span>Lift AI / <strong>get-a-demo Recommendations</strong></span>
+                </div>
+              </div>
+              <div class="top-actions">
+                <button class="icon-only" type="button" aria-label="Refresh"><i class="ph-duotone ph-arrow-clockwise"></i></button>
+                <button class="primary" type="button"><i class="ph-duotone ph-sparkle"></i>Open recommendation</button>
+              </div>
+            </div>
+            <div class="filterbar">
+              <button class="segment" type="button"><i class="ph-duotone ph-users-three"></i><span>Segment: Everyone</span><i class="ph-duotone ph-caret-down"></i></button>
+              <div class="filters">
+                <button type="button"><i class="ph-duotone ph-funnel"></i>All issues</button>
+                <button type="button">Impact first<i class="ph-duotone ph-caret-down"></i></button>
+                <button type="button">All statuses<i class="ph-duotone ph-caret-down"></i></button>
+                <button type="button">All severities<i class="ph-duotone ph-caret-down"></i></button>
+                <button type="button"><i class="ph-duotone ph-calendar-blank"></i>Last 30 days</button>
+              </div>
+            </div>
+          </header>
+
+          <section class="card lift-pipeline-card">
+            <div class="lift-pipeline-head">
+              <div>
+                <h2>Pipeline Health <i class="ph-duotone ph-info"></i><span class="status-pill status-new">New</span></h2>
+              </div>
+              <span>33 recommendations</span>
+            </div>
+            <div class="pipeline-bar" aria-hidden="true">
+              <span class="new" style="--w:64%"></span>
+              <span class="validating" style="--w:6%"></span>
+              <span class="complete" style="--w:15%"></span>
+              <span class="dismissed" style="--w:6%"></span>
+              <span class="planned" style="--w:9%"></span>
+            </div>
+            <div class="pipeline-legend">
+              <span><i class="dot new"></i><strong>21</strong> New</span>
+              <span><i class="dot validating"></i><strong>2</strong> Validating</span>
+              <span><i class="dot complete"></i><strong>5</strong> Validation Complete</span>
+              <span><i class="dot dismissed"></i><strong>2</strong> Dismissed</span>
+              <span><i class="dot planned"></i><strong>3</strong> Planned</span>
+            </div>
+          </section>
+
+          <section class="lift-priority-banner">
+            <div class="callout-icon"><i class="ph-duotone ph-sparkle"></i></div>
+            <div>
+              <strong>Start with your highest-impact recommendation</strong>
+              <span>"Dead Clicks on Pricing Page" <b>&bull;</b> predicted 2.86% &mdash; 34.78% lift</span>
+            </div>
+            <button type="button">Open recommendation</button>
+            <i class="ph-duotone ph-x"></i>
+          </section>
+
+          <section class="card lift-table-card">
+            <div class="lift-table-toolbar">
+              <div class="table-tools">
+                <label class="table-search"><i class="ph-duotone ph-magnifying-glass"></i><input value="Search Recommendation" aria-label="Search Recommendation" readonly /></label>
+                <button type="button">All time<i class="ph-duotone ph-caret-down"></i></button>
+              </div>
+              <div class="scan-meta">
+                <span><i class="ph-duotone ph-chart-bar"></i>Last Scan: <strong>4h ago</strong></span>
+                <span>Total Issues: <strong>33</strong></span>
+              </div>
+            </div>
+            <div class="lift-filter-chips">
+              <span class="is-active">All <b>33</b></span>
+              <span><i class="dot new"></i>New <b>21</b></span>
+              <span><i class="dot dismissed"></i>Dismissed <b>2</b></span>
+              <span><i class="dot planned"></i>Planned <b>3</b></span>
+              <span><i class="dot validating"></i>Validating <b>2</b></span>
+              <span><i class="dot complete"></i>Validation Complete <b>5</b></span>
+            </div>
+            <div class="lift-table-scroll">
+              <div class="lift-table">
+                <div class="lift-row lift-header">
+                  <span>Recommendation <i class="ph-duotone ph-caret-up-down"></i></span>
+                  <span>Status <i class="ph-duotone ph-caret-up-down"></i></span>
+                  <span>Page <i class="ph-duotone ph-caret-up-down"></i></span>
+                  <span>Issue Type <i class="ph-duotone ph-caret-up-down"></i></span>
+                  <span>Severity <i class="ph-duotone ph-caret-up-down"></i></span>
+                  <span>Funnel Steps <i class="ph-duotone ph-caret-up-down"></i></span>
+                  <span>Baseline <i class="ph-duotone ph-caret-up-down"></i></span>
+                  <span>Predicted Lift <i class="ph-duotone ph-caret-up-down"></i></span>
+                  <span>Actual Lift <i class="ph-duotone ph-caret-up-down"></i></span>
+                  <span>Last / First Seen</span>
+                </div>
+                <div class="lift-row"><strong>Slow Load Time on Contact Page</strong><span class="status-pill status-new">New</span><span><b>Contact</b><small>/contact</small></span><span>Page Performance</span><span class="severity-low">Low</span><span>1 &rarr; 2</span><span>29.31%</span><span>0.00% &mdash; 9.83%</span><span>Awaiting acceptance</span><span><a>Yesterday</a><small>Apr 8, 2026 &middot; first seen</small></span></div>
+                <div class="lift-row"><strong>JavaScript Error on About Page</strong><span class="status-pill status-validating">Validating</span><span><b>About Fullsession</b><small>/about-fullsession</small></span><span>Uncaught Exceptions</span><span class="severity-low">Low</span><span>2 &rarr; 3</span><span>17.39%</span><span>0.00% &mdash; 15.74%</span><span>Awaiting validation</span><span><a>Yesterday</a><small>Jul 2, 2026 &middot; first seen</small></span></div>
+                <div class="lift-row"><strong>Slow Load Time on Session Replay Page</strong><span class="status-pill status-validating">Validating</span><span><b>Session Replay</b><small>/product/session-replay</small></span><span>Page Performance</span><span class="severity-low">Low</span><span>1 &rarr; 2</span><span>33.82%</span><span>0.00% &mdash; 9.44%</span><span>Awaiting validation</span><span><a>2 days ago</a><small>Mar 28, 2026 &middot; first seen</small></span></div>
+                <div class="lift-row"><strong>Non-Interactive Elements Causing Dead Clicks</strong><span class="status-pill status-new">New</span><span><b>Home</b><small>/</small></span><span>Dead Clicks</span><span class="severity-low">Low</span><span>2 &rarr; 3</span><span>32.26%</span><span>0.00% &mdash; 17.10%</span><span>Awaiting acceptance</span><span><a>28 days ago</a><small>Apr 20, 2026 &middot; first seen</small></span></div>
+                <div class="lift-row"><strong>Dead Clicks on Product Page</strong><span class="status-pill status-new">New</span><span><b>Home</b><small>/</small></span><span>customEvent</span><span class="severity-low">Low</span><span>2 &rarr; 3</span><span>23.08%</span><span>0.00% &mdash; 17.59%</span><span>Awaiting acceptance</span><span><a>29 days ago</a><small>Apr 20, 2026 &middot; first seen</small></span></div>
+                <div class="lift-row"><strong>Uncaught TypeError on Pricing Page</strong><span class="status-pill status-complete">Validation Complete</span><span><b>Contact</b><small>/contact</small></span><span>Uncaught Exceptions</span><span class="severity-low">Low</span><span>2 &rarr; 3</span><span>16.67%</span><span>0.00% &mdash; 20.65%</span><span>-7.58%</span><span><a>36 days ago</a><small>Mar 4, 2026 &middot; first seen</small></span></div>
+                <div class="lift-row"><strong>Demo Request Process Confusion</strong><span class="status-pill status-new">New</span><span><b>Home</b><small>/</small></span><span>customEvent</span><span class="severity-low">Low</span><span>2 &rarr; 3</span><span>23.81%</span><span>0.00% &mdash; 20.31%</span><span>Awaiting acceptance</span><span><a>36 days ago</a><small>Apr 25, 2026 &middot; first seen</small></span></div>
+                <div class="lift-row"><strong>Slow Load Times on Blog Page</strong><span class="status-pill status-dismissed">Dismissed</span><span><b>Blog</b><small>/blog</small></span><span>Page Performance</span><span class="severity-low">Low</span><span>2 &rarr; 3</span><span>24.14%</span><span>0.00% &mdash; 18.94%</span><span>N/A - dismissed</span><span><a>38 days ago</a><small>Mar 12, 2026 &middot; first seen</small></span></div>
+                <div class="lift-row"><strong>Slow Load Times on /book-a-demo</strong><span class="status-pill status-complete">Validation Complete</span><span><b>Book A Demo</b><small>/book-a-demo</small></span><span>Page Performance</span><span class="severity-low">Low</span><span>1 &rarr; 2</span><span>52.54%</span><span>0.00% &mdash; 11.26%</span><span>0.00%</span><span><a>42 days ago</a><small>May 22, 2026 &middot; first seen</small></span></div>
+                <div class="lift-row"><strong>Dead Clicks on Non-Interactive Image</strong><span class="status-pill status-new">New</span><span><b>Home</b><small>/</small></span><span>Dead Clicks</span><span class="severity-low">Low</span><span>2 &rarr; 3</span><span>35.29%</span><span>0.00% &mdash; 25.20%</span><span>Awaiting acceptance</span><span><a>65 days ago</a><small>First seen in selected range</small></span></div>
+              </div>
+            </div>
+            <div class="lift-table-footer">
+              <span>1-10 of 33</span>
+              <div><button type="button"><i class="ph-duotone ph-caret-left"></i></button><button class="is-active" type="button">1</button><button type="button">2</button><button type="button">3</button><button type="button">4</button><button type="button"><i class="ph-duotone ph-caret-right"></i></button></div>
+            </div>
+          </section>
+        </div>
       </section>
     </main>
+    <script>
+      const appFrame = document.querySelector(".app-frame");
+      const navLinks = document.querySelectorAll(".nav-group a[data-page]");
+      const pageViews = document.querySelectorAll(".page-view");
+
+      function showPage(page) {
+        pageViews.forEach((view) => view.classList.toggle("is-active", view.dataset.page === page));
+        navLinks.forEach((link) => link.classList.toggle("is-active", link.dataset.page === page));
+        appFrame.scrollTop = 0;
+      }
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          const page = link.dataset.page;
+          showPage(page);
+          history.replaceState(null, "", `#${page}`);
+        });
+      });
+
+      document.querySelectorAll(".js-open-lift").forEach((button) => {
+        button.addEventListener("click", () => {
+          showPage("lift-ai");
+          history.replaceState(null, "", "#lift-ai");
+        });
+      });
+
+      if (location.hash === "#lift-ai") {
+        showPage("lift-ai");
+      }
+    </script>
   </body>
 </html>
